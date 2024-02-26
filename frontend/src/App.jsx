@@ -2,7 +2,7 @@ import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
 
 import useMobileView from "./hooks/useMobileView";
-import Url_Routes from "./Url_Routes";
+import UrlRoutes from "./UrlRoutes";
 import store from "./redux/store";
 
 // toast
@@ -16,7 +16,7 @@ export default function App() {
 
   return (
     <Provider store={store}>
-      <Url_Routes />
+      <UrlRoutes />
       <ToastContainer
         transition={Slide}
         autoClose={3000}

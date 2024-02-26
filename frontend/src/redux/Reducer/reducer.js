@@ -7,17 +7,15 @@ const initialState = {
   userId: null,
 
   // products
-  productList: [],
-  productList_meta: {},
+  usersList: [],
 };
 
 const DataReducers = (state = initialState, action) => {
-  // console.log("action", action.type, action.payload);
   switch (action.type) {
     case types.LOGIN:
       return {
         ...state,
-        loggedIn: action.payload.token && action.payload.userId && true,
+        loggedIn: action.payload.token && action.payload.userId,
         token: action.payload.token,
         userId: action.payload.userId,
       };
@@ -28,11 +26,11 @@ const DataReducers = (state = initialState, action) => {
         token: null,
         userId: null,
       };
-    case types.PRODUCTS_LIST:
+
+    case types.USERS_LIST:
       return {
         ...state,
-        productList: action.payload.data,
-        productList_meta: action.payload.meta,
+        usersList: action.payload,
       };
     default:
       return state;

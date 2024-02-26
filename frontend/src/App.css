@@ -4,7 +4,7 @@
 
 /* font-family */
 * {
-  font-family: 'Inter' !important;
+  font-family: 'Inter', sans-serif !important;
 }
 
 /* Toaster custom styles ---------------------------------------------------------------- */
@@ -20,9 +20,6 @@
 .Toastify__close-button>svg {
   height: 18px !important;
   width: 18px !important;
-}
-.search-bar{
-  background-color: #000000;
 }
 
 .Toastify__slide-enter {
@@ -74,7 +71,6 @@
 
 .lds-ellipsis div {
   position: absolute;
-  /* top: 33px; */
   width: 13px;
   height: 13px;
   border-radius: 50%;
