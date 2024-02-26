@@ -25,7 +25,5 @@ jobs:
       
       - name: Build project
         run: |
-          cd backend
-          npm run build
-          cd ../frontend
+          cd frontend
           npm run build
