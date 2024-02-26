@@ -1,7 +1,6 @@
 import { hashPassword, comparePassword } from "../helpers/authHelper.js";
 import userModel from "../models/userModel.js";
 import JWT from "jsonwebtoken";
-import validator from "validator";
 
 export const registerController = async (req, res) => {
   try {
@@ -14,13 +13,8 @@ export const registerController = async (req, res) => {
     if (!phone) return res.send({ error: "Phone no is Required" });
     if (!address) return res.send({ error: "address is Required" });
 
-    // Validate email format
-    if (!validator.isEmail(email)) {
-      return res.status(400).json({ error: "Invalid email format" });
-    }
-
     // check user
-    const existingUser = await userModel.findOne({ email: email });
+    const existingUser = await userModel.findOne({ email: email?.toString() });
 
     // existing user
     if (existingUser) {
@@ -70,13 +64,8 @@ export const loginController = async (req, res) => {
       });
     }
 
-    // Validate email format
-    if (!validator.isEmail(email)) {
-      return res.status(400).json({ error: "Invalid email format" });
-    }
-
     //check user
-    const user = await userModel.findOne({ email: email });
+    const user = await userModel.findOne({ email: email?.toString() });
     if (!user) {
       return res.status(404).send({
         success: false,
