@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "scripts": {
       "start": "concurrently \"npm run server\" \"npm run client\"",
-      "setup": "npm i && cd frontend && npm i && cd .. && cd backend && npm i && cd ..",
+      "setup": "npm i && cd frontend && npm i && cd ../backend && npm i && cd ..",
       "server": "cd backend && npm start",
       "client": "cd frontend && npm start",
 
