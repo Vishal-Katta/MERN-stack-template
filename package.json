@@ -7,8 +7,11 @@
       "server": "cd backend && npm start",
       "client": "cd frontend && npm start",
 
-      "build:preview": "concurrently \"npm run server\" \"npm run build:client\"",
-      "build:client": "cd frontend && npm run build && npm run preview"
+      "build": "concurrently \"npm run server\" \"npm run build:client\"",
+      "build:client": "cd frontend && npm run build",
+
+      "build:preview": "concurrently \"npm run server\" \"npm run build:client:preview\"",
+      "build:client:preview": "cd frontend && npm run build && npm run preview"
     },
     "dependencies": {
       "concurrently": "^8.2.2"
