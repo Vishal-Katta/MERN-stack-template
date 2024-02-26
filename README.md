@@ -42,7 +42,7 @@ cd MERN-stack-template
 
 ## Configuration
 
-> You will need latest version of `NodeJS` and `MongoDB` installed locally on your machine.
+You will need latest version of `NodeJS` and `MongoDB` installed locally on your machine.
 
 To configure this application for use of MongoDB, you should change the Environment variable in `.env` file with your database url.
 

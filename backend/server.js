@@ -11,18 +11,18 @@ import router from "./router.js";
 const app = express();
 dotenv.config();
 
-// this is our MongoDB database
-try {
-  const conn = await mongoose.connect(process.env.MONGO_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false,
-    useCreateIndex: true,
-  });
-  console.log(`Connected to MongoDB ${conn.connection.host}`);
-} catch (error) {
-  console.log(`Error in MongoDB Connection`);
-}
+// // this is our MongoDB database
+// try {
+//   const conn = await mongoose.connect(process.env.MONGO_URL, {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+//     useFindAndModify: false,
+//     useCreateIndex: true,
+//   });
+//   console.log(`Connected to MongoDB ${conn.connection.host}`);
+// } catch (error) {
+//   console.log(`Error in MongoDB Connection`);
+// }
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
