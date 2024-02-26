@@ -4,6 +4,7 @@
 <span align="center">
 
 ![GitHub release](https://img.shields.io/github/v/release/Vishal-Katta/MERN-stack-template)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Vishal-Katta_MERN-stack-template&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Vishal-Katta_MERN-stack-template)
 [![Build Status](https://github.com/Vishal-Katta/MERN-stack-template/actions/workflows/build.yml/badge.svg)](https://github.com/Vishal-Katta/MERN-stack-template/actions/workflows/build.yml)
 [![GitHub license](https://img.shields.io/github/license/Vishal-Katta/MERN-stack-template)](https://github.com/Vishal-Katta/MERN-stack-template)
 
