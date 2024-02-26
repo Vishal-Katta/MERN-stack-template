@@ -1,4 +1,4 @@
-# React-Vite-Redux-Tailwind Template
+# MERN Stack Template
 
 
 <span align="center">
@@ -24,30 +24,94 @@
 
 ## Introduction
 
-This project relies on several external libraries and frameworks to enhance development efficiency, improve UI/UX, and streamline state management. Below is a curated list of dependencies with their respective explanations.
+mern-stack-template is a MERN Stack Template created to easily get started with developing a Full Stack Web App using the complete MERN Stack with major libraries show below.
 
 ![Project Stack](/frontend/public/ProjectStack.png)
 
-## Installation
+You can checkout chrome's lighthouse report while running the build! 😏
+
+## Getting Started
 
 To clone the project, Run the following command in your terminal:
 
 ```bash
 git clone https://github.com/Vishal-Katta/MERN-stack-template.git
+cd MERN-stack-template
 ```
 
-## Running the Server
+## Configuration
 
-To start the development server, you can use npm scripts. Run the following command in your terminal:
+> You will need latest version of `NodeJS` and `MongoDB` installed locally on your machine.
 
-```bash
-cd MERN-stack-template
-npm install
-npm start
+To configure this application for use of MongoDB, you should change the Environment variable in `.env` file with your database url.
+
+> *Quick Note:* This project is equiped with a basic API setup using Mongoose. It is expected that you will modify this API backend as necessary to suite your project. **DO NOT** count on and use the current API's USER SCHEMA as it is only meant as a placeholder and is far from a complete model.
+
+## Installation
+
+To get started with this project, you'll want to install the required dependencies and The following command installs both client and server packages including root directory package.json:
+
+```shell
+npm run setup
+```
+
+## Running the server
+
+**Starting the project**
+
+To **run whole project** ( backend and frontend ) you can use the following command:
+
+```shell
+npm run start
+```
+
+To **start just the backend** MonogoDB server and work on the API you can run:
+
+```shell
+npm run server
+```
+
+To **start just the frontend** and work on the UI, you can run:
+
+```shell
+npm run client
+```
+To run backend on build file of frontend, you can run:
+
+```shell
+npm run build:preview
 ```
 
 ## Dependencies
 A list of dependencies used in the project, along with brief explanations for each.
+
+### Backend Dependencies
+
+- ![Express](https://img.shields.io/badge/Express-_-000000?logo=express)  
+   Express is a fast, unopinionated, minimalist web framework for Node.js, used for building web applications and APIs.
+- ![Mongoose](https://img.shields.io/badge/Mongoose-_-47A248?logo=mongoose)  
+   Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node.js, providing a higher-level abstraction for MongoDB operations.
+- ![jsonwebtoken](https://img.shields.io/badge/jsonwebtoken-_-orange)  
+   jsonwebtoken is an implementation of JSON Web Tokens (JWT) for authentication and authorization.
+- ![Nodemon](https://img.shields.io/badge/Nodemon-_-76D04B?logo=nodemon)  
+   Nodemon is a utility that monitors for changes in files and automatically restarts the server when any changes occur during development.
+- ![bcrypt](https://img.shields.io/badge/bcrypt-_-blue)  
+   bcrypt is a password-hashing function library used for hashing passwords before storing them securely.
+- ![cors](https://img.shields.io/badge/cors-_-green)  
+   CORS is a Node.js package for providing a Connect/Express middleware that can be used to enable CORS with various options.
+- ![body-parser](https://img.shields.io/badge/body--parser-_-blue)  
+   body-parser is a Node.js body parsing middleware, used for parsing incoming request bodies in a middleware before handling.
+- ![dotenv](https://img.shields.io/badge/dotenv-_-yellow)  
+   dotenv is a zero-dependency module that loads environment variables from a `.env` file into `process.env`.
+- ![morgan](https://img.shields.io/badge/morgan-_-blue)  
+   morgan is an HTTP request logger middleware for Node.js, used for logging requests to the server.
+- ![path](https://img.shields.io/badge/path-_-grey)  
+   path is a Node.js module that provides utilities for working with file and directory paths.
+- ![colors](https://img.shields.io/badge/colors-_-red)  
+   colors is a Node.js package for adding color to terminal text output.
+
+
+### Frontend Dependencies
 
 - ![React](https://img.shields.io/badge/React-_-61DAFB?logo=react)  
   React is a JavaScript library for building user interfaces, developed and maintained by Facebook.

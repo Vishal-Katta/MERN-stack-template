@@ -14,7 +14,7 @@ export const registerController = async (req, res) => {
     if (!address) return res.send({ error: "address is Required" });
 
     // check user
-    const existingUser = await userModel.findOne({ email: email });
+    const existingUser = await userModel.findOne({ email: { $eq: email } });
 
     // existing user
     if (existingUser) {

@@ -4,12 +4,24 @@ import { loadusersListData } from "../redux/Action/action";
 
 const libraries = [
   {
-    name: "Vite",
-    id: "vite",
+    name: "Mongodb",
+    id: "mongodb",
+  },
+  {
+    name: "Express",
+    id: "express",
   },
   {
     name: "React",
     id: "react",
+  },
+  {
+    name: "Nodejs",
+    id: "nodejs",
+  },
+  {
+    name: "Vite",
+    id: "vite",
   },
   {
     name: "Redux",
@@ -22,10 +34,6 @@ const libraries = [
   {
     name: "MUI",
     id: "mui",
-  },
-  {
-    name: "emotion",
-    id: "emotion",
   },
 ];
 
@@ -48,7 +56,7 @@ export default function Hello() {
           This Project setup Template includes the following. <br />
           Happy Coding!
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 px-4">
+        <div className="grid grid-cols-3 md:grid-cols-4 gap-6 px-4">
           {libraries.map((library) => (
             <div
               key={library?.id}

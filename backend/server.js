@@ -5,26 +5,24 @@ import bodyParser from "body-parser";
 import morgan from "morgan";
 import path from "path";
 import dotenv from "dotenv";
-import colors from "colors";
 
 import router from "./router.js";
 
 const app = express();
 dotenv.config();
 
-// // this is our MongoDB database
-// try {
-//   const conn = await mongoose.connect(process.env.MONGO_URL, {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true,
-//     useFindAndModify: false,
-//     useCreateIndex: true,
-//   });
-//   console.log(`Connected to MongoDB ${conn.connection.host}`.blue);
-// } catch (error) {
-//   // console.log(`Error in MongoDB Connection: ${error}`.red);
-//   console.log(`Error in MongoDB Connection`.red);
-// }
+// this is our MongoDB database
+try {
+  const conn = await mongoose.connect(process.env.MONGO_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+    useCreateIndex: true,
+  });
+  console.log(`Connected to MongoDB ${conn.connection.host}`);
+} catch (error) {
+  console.log(`Error in MongoDB Connection`);
+}
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
